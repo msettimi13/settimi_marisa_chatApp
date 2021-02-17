@@ -1,0 +1,4 @@
+- design chat app to be different then class build
+- expand the class build and add maybe: storing date, username
+    - tutorialspoint.com/socket.io/index.html 
+    - vue or react for front end
