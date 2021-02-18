@@ -1,0 +1,40 @@
+.new-message {
+    padding: 10px;
+    background-color: #14295e;
+    color: white;
+    border-radius: 8px;
+    float: left;
+    clear: both;
+}
+
+.my-message {
+    background-color: #596848;
+    float: right;
+    margin: .5%;
+}
+
+textarea {
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+    resize: none;
+    margin-top: 50%;
+}
+
+.submit {
+    height: 30px;
+    width: 100%;
+    font-family: 'Courier Prime', monospace;
+    color: white;
+    background-color: #14295e;
+}
+
+#app {
+    padding: 40px;
+    margin-top: 10%;
+}
+
+#app h1 {
+    margin-bottom: 5%;
+}
+

@@ -7,10 +7,31 @@
 
 body {
     background-color: $main-bg-color;
-    color: $main-text-color;
-
-    font-family: $default-family;
+    font-family: 'Courier Prime', monospace;
     font-size: 16px;
+}
+
+.background {
+    color: #e5c27f;
+    font-size: larger;
+    background-image: url('../images/background.svg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    background-color: #596848;
+    padding: 10vh;
+}
+
+.button {
+    background-color: #e5c27f;
+    font-size: larger;
+    padding: 1em;
+    border-radius: 10px;
+    margin-right: 43%;
 }
 
 a {
@@ -21,16 +42,3 @@ a {
     margin: 1rem 0;
 }
 
-.new-message {
-    padding: 10px;
-    background-color: blue;
-    color: white;
-    border-radius: 8px;
-    float: left;
-    clear: both;
-}
-
-.my-message {
-    background-color: green;
-    float: right;
-}

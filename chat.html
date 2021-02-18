@@ -6,11 +6,13 @@
 
     <link rel="stylesheet" href="css/main.css">
 
-    <title>My chat page</title>
+    <title>be kind chat</title>
 </head>
 <body>
     <main id="app">
-        <h2>This is where my awesome chat messages will be</h2>
+        <div class="typewriter">
+            <h1>be kind and be you</h1>
+        </div>
 
         <!-- vue custom message component goes here-->
         <section class="messages">
@@ -20,8 +22,8 @@
         </section>
 
         <section class="message-wrapper">
-            <textarea v-model="message" class="text-message"></textarea>
-            <input @click.prevent="dispatchMessage" type="submit" value="send">
+            <textarea v-model="message" class="text-message" placeholder="write your thoughts here.."></textarea>
+            <input @click.prevent="dispatchMessage" type="submit" value="send" class="submit">
         </section>
     </main>
 

@@ -2,7 +2,15 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../Chang_K_ChatApp"
+		},
+		{
+			"path": "../Romanko_V_ChatApp"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mschatapp"
+	}
 }
