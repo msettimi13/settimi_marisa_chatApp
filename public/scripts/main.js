@@ -24,7 +24,23 @@ import ChatMessage from "./components/TheMessageComponent.js"
             nickname: "",
             username: "",
             socketID: "",
-            message: ""
+            typing: false
+        },
+
+        watch: {
+            message(value) {
+            value ? socket.emit('typing', this.nickname) : socket.emit('stoptyping');
+            }
+        },
+        
+        created() {
+            socket.on('typing', (data) => {
+                console.log(data);
+                this.typing = data || 'Anonymous';
+            });
+            socket.on('stoptyping', () => {
+                this.typing = false;
+            });
         },
 
         created: function() {
@@ -37,12 +53,17 @@ import ChatMessage from "./components/TheMessageComponent.js"
                 socket.emit('chatmessage', {content: this.message, name: this.nickname || "Anonymous" });
 
                 this.message="";
-            }
+            },
+            
+            userTyping() {
+                socket.emit('typing', this.nickname);
+            },
         },
 
         components: {
             newmessage: ChatMessage
         }
+        
     }).$mount("#app");
 
     socket.addEventListener("connected", setUserId);

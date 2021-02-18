@@ -11,7 +11,7 @@
 <body>
     <main id="app">
         <div class="typewriter">
-            <h1>be kind and be you</h1>
+            <h1>be kind and listen</h1>
         </div>
 
         <!-- vue custom message component goes here-->
@@ -21,7 +21,7 @@
             </ul>
         </section>
 
-        <p v-if="typing" class="text-typing">user is typing...</p>
+        <p v-if="typing" class="text-typing">{{typing}} is typing...</p>
 
         <section class="message-wrapper">
             <textarea v-model="message" class="text-message" placeholder="write your thoughts here.."></textarea>

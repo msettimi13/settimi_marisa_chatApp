@@ -17,6 +17,10 @@ app.get("/chat", (req, res) => {
 	res.sendFile(path.join(__dirname, "chat.html"));
 });
 
+app.get("/listen", (req, res) => {
+	res.sendFile(path.join(__dirname, "listen.html"));
+});
+
 const server = app.listen(port,() => {
 	console.log(`app is running on ${port}`);
 });
@@ -35,7 +39,16 @@ messenger.on('connection', (socket) =>  {
 		console.log(msg);
 		
 		messenger.emit('message', { id: socket.id, message: msg })
+		
 	});
+
+	socket.on('typing', function (data) {
+			socket.emit('typing', data);
+		});
+	
+	socket.on('stoptyping', () => {
+        socket.emit('stoptyping');
+    });
 
 	socket.on('disconnect', () => {
 		console.log('a user has disconnected');
