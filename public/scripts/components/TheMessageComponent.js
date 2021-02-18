@@ -5,6 +5,7 @@ export default{
     `
     <article class="new-message" :class="{ 'my-message' : matchedID }">
         <h4>{{msg.message.name}} says:</h4>
+        <p>{{msg.time}}</p>
         <p>{{msg.message.content}}</p>
     </article>
     `,
