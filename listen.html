@@ -24,7 +24,7 @@
         <p v-if="typing" class="text-typing">{{typing}} is typing...</p>
 
         <section class="message-wrapper">
-            <textarea v-model="message" class="text-message" placeholder="write your thoughts here.."></textarea>
+            <textarea v-model="message" class="text-message" placeholder="respond to their story here.."></textarea>
             <input @click.prevent="dispatchMessage" type="submit" value="send" class="submit">
         </section>
     </main>
