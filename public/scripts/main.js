@@ -18,12 +18,18 @@ import ChatMessage from "./components/TheMessageComponent.js"
         vm.messages.push(message);
     }
 
+    function userTyping() {
+        console.log('user typing'); // got the user typing to load in console but not too sure why it doesnt pop up, 
+        //it sometimes pops up when the page is refreshed but it wont show other than that
+    }
+
     const vm = new Vue({
         data: {
             messages: [],
             nickname: "",
             username: "",
             socketID: "",
+            message: "",
             typing: false
         },
 
@@ -68,4 +74,5 @@ import ChatMessage from "./components/TheMessageComponent.js"
 
     socket.addEventListener("connected", setUserId);
     socket.addEventListener('message', appendMessage);
+    socket.addEventListener('typing', userTyping);
 })();
